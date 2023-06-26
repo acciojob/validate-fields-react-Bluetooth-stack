@@ -10,7 +10,7 @@ const App = () => {
   function submitHandle(e){
     e.preventDefault();
     if(name=='' || pass==''){
-      setError('Both username and password are required');
+      setError('Both username and password are required.');
       return;
     }
     setError('');
@@ -27,9 +27,7 @@ const App = () => {
           <input type="password" id="password" onChange={(e)=>{setPass(e.target.value)}}></input>
           <br></br>
           <br></br>
-          {
-            error && <p id='errorMessage'>{error}</p>
-          }
+          <p id='errorMessage'>{error}</p>
           <button type="submit">Login</button>
         </form>
     </div>
