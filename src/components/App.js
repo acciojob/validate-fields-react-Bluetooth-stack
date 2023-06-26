@@ -27,7 +27,11 @@ const App = () => {
           <input type="password" id="password" onChange={(e)=>{setPass(e.target.value)}}></input>
           <br></br>
           <br></br>
-          <p id='errorMessage'>{error}</p>
+          {
+            error?
+            <p id='errorMessage'>{error}</p>:
+            <p></p>
+          }
           <button type="submit">Login</button>
         </form>
     </div>
